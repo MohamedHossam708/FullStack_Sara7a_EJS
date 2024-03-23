@@ -24,7 +24,7 @@ dotenv.config()
 
 
 const app = express()
-const port = process.env.PORT||3000
+const port = process.env.PORT
 app.use(flash())
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
@@ -46,4 +46,4 @@ app.use(logoutRouter)
 
 
 mongoConn()
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(3000, () => console.log(`Example app listening on port ${port}!`))
