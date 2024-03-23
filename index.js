@@ -16,7 +16,7 @@ const MongoDBStore= mongoSession(session)
 
 
 let store = new MongoDBStore({
-  uri:process.env.MONGO_CONN,
+  uri:'mongodb+srv://mohamedhossamm708:ucPT3VgAj6U02rn3@cluster0.qubnqdh.mongodb.net/Sara7a',
   collection: process.env.MONGO_COLLECTION
 });
 dotenv.config()
