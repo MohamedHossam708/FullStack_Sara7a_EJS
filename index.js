@@ -24,7 +24,7 @@ dotenv.config()
 
 
 const app = express()
-const port = process.env.PORT
+const port = 3000
 app.use(flash())
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
