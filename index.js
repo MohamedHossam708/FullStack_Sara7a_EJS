@@ -16,7 +16,7 @@ const MongoDBStore= mongoSession(session)
 
 
 let store = new MongoDBStore({
-  uri:'mongodb://127.0.0.1:27017/Sara7a_MVC',
+  uri:process.env.MONGO_CONN,
   collection: process.env.MONGO_COLLECTION
 });
 dotenv.config()
@@ -24,7 +24,7 @@ dotenv.config()
 
 
 const app = express()
-const port = process.env.PORT||3000
+const port = 10000 || 4000
 app.use(flash())
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
